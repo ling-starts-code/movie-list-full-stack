@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch ,useSelector} from 'react-redux'
 import {deleteMovieById} from'../actions'
+import UpdateMovies from './UpdateMovies'
 
 // eslint-disable-next-line no-unused-vars
 function Movies() {
@@ -14,10 +15,9 @@ function Movies() {
     console.log('delete button clicked',id)
   }
 
-  // const handleUpdate=()=>{
+  
 
-  // }
-
+ 
 
   return (
     <ul className='todo-list'>
@@ -26,10 +26,11 @@ function Movies() {
        <li key={item.id}>
          <div className='view'>
           {/* <input className='toggle'/> */}
-          <label onDoubleClick={}> {item.name} </label>
+          <UpdateMovies item={item}/>
+          {/* <label> {item.name} </label> */}
           <button className='destroy'onClick={(e)=>{handleDelete(e,item.id)}}></button>
         </div>
-          
+        {/* onDoubleClick={(e)=>{handleUpdate(e,item,id)}} */}
       </li>  )    
     })}
     </ul>

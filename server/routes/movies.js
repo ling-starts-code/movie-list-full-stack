@@ -39,9 +39,10 @@ router.delete('/:id', (req, res)=> {
 
 router.patch('/:id', (req,res)=>{
   const updatedMovie = req.body
-  console.log(' updatedMovie', updatedMovie)
-  db.updateMovieById(req.params.id,updatedMovie)
-  .then(()=> {res.json({movieId:req.params.id,updatedMovie})})
+  const {id} = req.params
+  console.log('updatedMovie', updatedMovie)
+  db.updateMovieById(id,updatedMovie)
+  .then(()=> {res.json(updatedMovie)})
   .catch((err)=>{
     console.log(err)
     res.status(500).json({message:'Something went wrong'})

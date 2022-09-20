@@ -5,7 +5,7 @@ function getAllMoviesData(db=connection){
 }
 
 function addMovies(movie, db = connection){
-  return db('movies').insert({name:movie})
+  return db('movies').insert({name:movie.name})
 }
 
 function deleteMovieById(movieId, db = connection) {
@@ -13,7 +13,7 @@ function deleteMovieById(movieId, db = connection) {
 }
 
 function updateMovieById(movieId,updatedMovie,db = connection) {
-  return db.addMovies('movies').where('id',movieId).update('name',updatedMovie)
+  return db('movies').where('id',movieId).update('name',updatedMovie.name)
 }
 
 module.exports = {getAllMoviesData,addMovies,deleteMovieById,updateMovieById}

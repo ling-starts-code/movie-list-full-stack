@@ -10,7 +10,6 @@ export function saveMovies(movie){
   })
 }
 
-
 export function getAllMovies(){
   return request.get(rootUrl+'/movies').then((res)=>{
     return res.body
@@ -23,4 +22,10 @@ export function deleteMovieData(id){
     console.log(res.status)
     return res.body
   })
+}
+
+export function updateMoviesData(updatedMovie){
+  return request.patch(rootUrl+'/movies/'+updatedMovie.id)
+    .send(updatedMovie)
+    .then((res)=>{return res.body})
 }
