@@ -29,7 +29,6 @@ const UpdateMovies=(props)=>{
   return(
     <div>
     <form>
-      {/* <label onDoubleClick={handleDoubleClick}> {props.item.name} </label> */}
       {showInput?
       <input value={movie} onChange={handleChange} onKeyPress={(e)=>{
           e.key==='Enter'&& handleUpdate(e)

@@ -15,22 +15,18 @@ function Movies() {
     console.log('delete button clicked',id)
   }
 
-  
-
- 
-
   return (
     <ul className='todo-list'>
     {movies.map((item)=>{ 
       return (
-       <li key={item.id}>
+       <li  key={item.id}>
          <div className='view'>
           {/* <input className='toggle'/> */}
           <UpdateMovies item={item}/>
           {/* <label> {item.name} </label> */}
-          <button className='destroy'onClick={(e)=>{handleDelete(e,item.id)}}></button>
+          <button className='destroy' onClick={(e)=>{handleDelete(e,item.id)}}></button>
         </div>
-        {/* onDoubleClick={(e)=>{handleUpdate(e,item,id)}} */}
+        {/* <input className='edit'/> */}
       </li>  )    
     })}
     </ul>

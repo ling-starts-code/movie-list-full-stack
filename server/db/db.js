@@ -5,7 +5,7 @@ function getAllMoviesData(db=connection){
 }
 
 function addMovies(movie, db = connection){
-  return db('movies').insert({name:movie.name})
+  return db('movies').insert({name:movie})
 }
 
 function deleteMovieById(movieId, db = connection) {
