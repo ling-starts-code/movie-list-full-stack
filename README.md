@@ -1,8 +1,8 @@
 This is my side project using React, Redux in the front end and databese in the backend. 
 
-# TODO App
+# Movie List App
 
-For this challenge, we will build a todo app (which is a common way to practice a new technology), using the full stack! From the database to the server, the API client, React and Redux, this app will ask you to use everything you've learned.
+This is similar to an todo APP, but by adding, editing and deleting movies instead(because I am a movie fan!!), using the full stack! From the database to the server, the API client, React and Redux, this app will ask you to use everything you've learned.
 
 ## Setup
 
@@ -37,7 +37,7 @@ Here's a list of steps in case they are useful. You can build in any order you l
 
 ### 1. Building the database
 
-- [ ] Design a database to store a list of your things (e.g. books)
+- [ ] Design a database to store a list of your things (e.g. books, movies)
 - [ ] Build the migrations and seed data
 
 ### 2. Building the API
